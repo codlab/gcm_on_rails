@@ -3,7 +3,7 @@ class CreateGcmDevices < ActiveRecord::Migration # :nodoc:
     create_table :gcm_devices do |t|
       t.string :registration_id, :size => 120, :null => false
       t.datetime :last_registered_at
-
+      t.integer :user_id, :default => 0
       t.timestamps
     end
 
